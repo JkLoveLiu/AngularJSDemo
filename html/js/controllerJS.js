@@ -83,4 +83,18 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
+    $scope.footerHideFn = function (){
+        $scope.footerHide = {
+            "display": "none"
+        }
+    }
+    $scope.myInfoAccountBack = function () {
+        $scope.footerHide = {
+            "display": "block"
+        }
+    }
+
+
+
+
 })

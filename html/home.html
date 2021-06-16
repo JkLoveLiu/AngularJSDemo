@@ -17,12 +17,13 @@
 
     <link href="../css/home.css" rel="stylesheet">
     <link href="../css/myInfo.css" rel="stylesheet">
+    <link href="../css/myInfo_account.css" rel="stylesheet">
 </head>
 <body ng-app="homeApp">
 <div ng-controller="homeCtrl">
     <ion-nav-view></ion-nav-view>
     <!--   底部     -->
-    <div class="bar bar-footer bar-light">
+    <div class="bar bar-footer bar-light" ng-style="footerHide">
         <div class="tabs tabs-icon-top bg_none">
             <a class="tab-item" ng-class="classHome" ui-sref="home"
                ng-click="homeClick(); pageSelect('classHome')">
@@ -106,7 +107,7 @@
                 <div class="content has-header ionic-pseudo">
                     <div class="list">
                         <a class="item myInfo_item_height item-icon-left item-icon-right"
-                           ng-click="" href="#">
+                           ui-sref="myInfo_account" ng-click="footerHideFn()">
                             <i class="colorIcon color-wodezhanghu2"></i>
                             我的账户
                             <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
@@ -175,6 +176,28 @@
                             我的分享
                             <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
+</script>
+<script id="templates/myInfoAccountTemplate.html" type="text/ng-template">
+    <ion-view>
+        <ion-content>
+            <div class="myInfo_account_div">
+                <div class="bar bar-header bar-light">
+                    <div class="tabs tabs-icon-top">
+                        <a class="tab-item myInfo_account_icon_left"
+                           ng-click="myInfoAccountBack()" ui-sref="myInfo"
+                           style="height: 100%;width: 44px;left: 0;z-index: 2">
+                            <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
+                        </a>
+                        <h1 class="title" style="line-height: 54px">我的</h1>
+                        <a class="tab-item myInfo_account_icon_right" href="#">
+                            <i class="iconfont icon-kefu myInfo_text_weight"></i>
+                        </a>
+
                     </div>
                 </div>
             </div>

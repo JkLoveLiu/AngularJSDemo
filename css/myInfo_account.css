@@ -1,0 +1,31 @@
+.myInfo_account_div{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*background-color: #0a9dc7;*/
+}
+
+
+
+.myInfo_account_div .myInfo_account_icon_left {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    line-height: 56px;
+    opacity: 1;
+}
+.myInfo_account_div .myInfo_account_icon_right {
+    display: inline-block;
+    position: absolute;
+    right: 22px;
+    line-height: 56px;
+    opacity: 1;
+    font-size: 18px;
+}
+.myInfo_account_div .myInfo_text_weight{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+}

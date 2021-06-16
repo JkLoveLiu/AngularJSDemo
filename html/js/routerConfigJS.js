@@ -12,4 +12,8 @@ homeApp.config(function ($stateProvider) {
             url: '/myInfo',
             templateUrl: 'templates/myInfoTemplate.html'
         })
+        .state('myInfo_account', {
+            url: '/myInfo_account',
+            templateUrl: 'templates/myInfoAccountTemplate.html'
+        })
 })

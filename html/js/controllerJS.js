@@ -4,6 +4,9 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
     }
     $scope.myActiveSlide = 0;
     // 是否选中
+    $scope.classHome = {
+        "aIsSelect": true
+    }
     $scope.pageSelect = function (ele) {
         $scope.classHome = {
             "aIsSelect": false

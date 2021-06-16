@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "colorIcon"; /* Project id 2610264 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1623839543464') format('woff2'),
+       url('iconfont.woff?t=1623839543464') format('woff'),
+       url('iconfont.ttf?t=1623839543464') format('truetype');
+}
+
+.colorIcon {
+  font-family: "colorIcon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.color-yinhangzhanghukaihushenqingliucheng:before {
+  content: "\e654";
+}
+
+.color-jianglidan:before {
+  content: "\e69d";
+}
+
+.color-genjinjilu:before {
+  content: "\e665";
+}
+
+.color-zaixiankaihu:before {
+  content: "\e6a2";
+}
+
+.color-yinsi:before {
+  content: "\e662";
+}
+
+.color-zaixiankaihu1:before {
+  content: "\e6aa";
+}
+
+.color-wangdian4:before {
+  content: "\e612";
+}
+
+.color-zhanghuguanli:before {
+  content: "\e614";
+}
+
+.color-anquanyinsi:before {
+  content: "\e98b";
+}
+
+.color-rili:before {
+  content: "\e616";
+}
+
+.color-jilu1:before {
+  content: "\e635";
+}
+
+.color-anquanzhongxin:before {
+  content: "\e602";
+}
+
+.color-fenxiang:before {
+  content: "\e67f";
+}
+
+.color-wodezhanghu2:before {
+  content: "\e6be";
+}
+
+.color-wangdian1:before {
+  content: "\e69c";
+}
+
+.color-fenxiang1:before {
+  content: "\e658";
+}
+
+.color-anquanzhongxin1:before {
+  content: "\e61e";
+}
+
+.color-kefu1:before {
+  content: "\e617";
+}
+
+.color-jiangli1:before {
+  content: "\e633";
+}
+
+.color-wode3:before {
+  content: "\e712";
+}
+
+.color-jiaoyijilu1:before {
+  content: "\e60e";
+}
+
+.color-fuwutiaokuanjiyinsi2:before {
+  content: "\e60f";
+}
+
+.color-wangdian2:before {
+  content: "\e80b";
+}
+
+.color-naozhong1:before {
+  content: "\e607";
+}
+
+.color-shenghuojiaofei1:before {
+  content: "\e627";
+}
+
+.color-huankuan1:before {
+  content: "\e613";
+}
+
+.color-quanbu:before {
+  content: "\eb84";
+}
+
+.color-Positioning_icon:before {
+  content: "\e687";
+}
+
+.color-zhinengjijin:before {
+  content: "\e61c";
+}
+
+.color-licaidingdan:before {
+  content: "\e615";
+}
+
+.color-dkw_daikuan-:before {
+  content: "\e609";
+}
+
+.color-shenghuojiaofei:before {
+  content: "\e600";
+}
+
+.color-64:before {
+  content: "\e75a";
+}
+
+.color-remenhuodong2:before {
+  content: "\e69b";
+}
+
+.color-toutiao1:before {
+  content: "\e638";
+}
+
+.color-ETC:before {
+  content: "\e649";
+}
+
+.color-xinyongqia:before {
+  content: "\e606";
+}
+
+.color-cunkuan3:before {
+  content: "\f593";
+}
+

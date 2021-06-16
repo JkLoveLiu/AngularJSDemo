@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link href="../lib/ionic/ionic/css/ionic.css" rel="stylesheet">
+    <script src="../lib/ionic/ionic/js/ionic.bundle.js"></script>
+    <script src="../lib/angular/angular.min.js"></script>
+    <!--  阿里的icon图标库  -->
+    <link href="../css/icon/iconfont.css" rel="stylesheet">
+    <!--  阿里的icon图标库-彩色  -->
+    <link rel="stylesheet" href="../css/icon-color/iconfont.css">
+    <link rel="preload" href="../css/icon-color/iconfont.css" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/myInfo.css" rel="stylesheet">
+</head>
+<body ng-app="homeApp">
+<div ng-controller="homeCtrl">
+    <ion-nav-view></ion-nav-view>
+    <!--   底部     -->
+    <div class="bar bar-footer bar-light">
+        <div class="tabs tabs-icon-top bg_none">
+            <a class="tab-item" ui-sref="home">
+                <i class="iconfont icon-shouye footer_font_weight"></i>
+                <span class="iconfont_text">首页</span>
+            </a>
+            <a class="tab-item" ui-sref="notWrite" ng-click="notPage('理财')">
+                <i class="iconfont icon-licai footer_font_weight"></i>
+                <span class="iconfont_text">理财</span>
+            </a>
+            <a class="tab-item" ui-sref="notWrite" ng-click="notPage('生活')">
+                <i class="iconfont icon-shenghuo footer_font_weight"></i>
+                <span class="iconfont_text">生活</span>
+            </a>
+            <a class="tab-item" ui-sref="myInfo" ng-click="myInfoClick()">
+                <i class="iconfont icon-wode footer_font_weight"></i>
+                <span class="iconfont_text">我的</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    let homeApp = angular.module('homeApp', ['ionic'])
+    homeApp.config(function ($stateProvider) {
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'templates/homeTemplate.html'
+            })
+            .state('notWrite', {
+                url: '/notWrite',
+                templateUrl: 'templates/pageNotWrite.html'
+            })
+            .state('myInfo', {
+                url: '/myInfo',
+                templateUrl: 'templates/myInfoTemplate.html'
+            })
+    })
+
+</script>
+<script src="./js/controllerJS.js"></script>
+<!--这是模板-->
+<!--首页模板-->
+<script id="templates/homeTemplate.html" type="text/ng-template">
+    <ion-view>
+        <ion-content>
+            <div class="home_div">
+                <!--   头部     -->
+                <div class="bar bar-header bg_none">
+                    <div class="tabs tabs-icon-top bg_none">
+                        <a class="tab-item" href="#">
+                            <i class="iconfont icon-denglu text_weight"></i>
+                            <span class="iconfont_text">登录</span>
+                        </a>
+                        <div class="header_so">
+                            <label class="item-input-wrapper bg_none">
+                                <i class="iconfont icon-sousuo"></i>
+                                &nbsp;&nbsp;
+                                <input type="text" placeholder="请输入" class="header_input bg_none"
+                                       ng-click="headerSoInputClick()">
+                                <i class="iconfont icon-yuyin" style="font-size: 22px"></i>
+                            </label>
+                        </div>
+                        <a class="tab-item" href="#">
+                            <i class="iconfont icon-kefu text_weight"></i>
+                            <span class="iconfont_text">客服</span>
+                        </a>
+                        <a class="tab-item" href="#" style="text-align: left">
+                            <i class="iconfont icon-xiaoxi1  text_weight"></i>
+                            <span class="iconfont_text">消息</span>
+                        </a>
+                    </div>
+                </div>
+                <!--   内容     -->
+                <div class="home_content">
+                    <!--   内容上部     -->
+                    <div class="home_content_head">
+                        <div class="row content_head_icon">
+                            <div class="col">
+                                <a href="#">
+                                    <i class="iconfont icon-saoma content_head_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_head_icon_text">扫一扫</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="iconfont icon-fukuan content_head_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_head_icon_text">收付款</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="iconfont icon-icon_A content_head_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_head_icon_text">转账</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="iconfont icon-weibiaoti5 content_head_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_head_icon_text">我的账户</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   内容中部     -->
+                    <div class="home_content_body">
+                        <div class="row content_body_icon1">
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-xinyongqia content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">信用卡</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-cunkuan3 content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">存款</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-remenhuodong2 content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">热门活动</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-shenghuojiaofei content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">生活缴费</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-dkw_daikuan- content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">贷款</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row content_body_icon2">
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-licaidingdan content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">理财产品</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-zhinengjijin content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">基金</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-Positioning_icon content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">本地优惠</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-ETC content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">ETC办理</p>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#">
+                                    <i class="colorIcon color-quanbu content_body_icon_size"></i>
+                                    <div style="height: 5px"></div>
+                                    <p class="content_body_icon_text">全部</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content_body_news">
+                            <span class="body_news_icon">
+                                <i class="colorIcon color-toutiao1" style="font-size: 50px;line-height: 50px"></i>
+                            </span>
+                            <div class="body_news_dian"></div>
+                            <span class="body_news_content">
+                                <span class="news_content_move" ng-style="news_content_move">
+                                    <a href="#" class="body_news_content_info"
+                                       ng-repeat="item in dataNews">
+                                        {{ item }}
+                                    </a>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="content_body_USDAndAU">
+                            <div class="body_USDAndAU_border">
+                                <span>美元(USD)</span>
+                                <span>{{ exchangeRateUSD }}</span>
+                                <span>|</span>
+                                <span>黄金(AU)</span>
+                                <span>{{ exchangeRateAU }}</span>
+                            </div>
+                        </div>
+                        <div class="content_body_moveImg">
+                            <div class="body_moveImg_width">
+                                <ion-slide-box
+                                        active-slide="myActiveSlide"
+                                        does-continue="true"
+                                        auto-play="true"
+                                        slide-interval="2500">
+                                    <ion-slide>
+                                        <div class="box img_one"><h1>BLUE</h1></div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="box img_two"><h1>YELLOW</h1></div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="box img_three"><h1>PINK</h1></div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="box img_four"><h1>goldenrod</h1></div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="box img_five"><h1>green</h1></div>
+                                    </ion-slide>
+                                </ion-slide-box>
+                            </div>
+                        </div>
+                        <div class="content_body_footer">
+                            <a href="#">
+                                <div>
+                                    <span>金融小秘书</span>
+                                    <i class="icon ion-chevron-right"></i>
+                                </div>
+                                <div>
+                                    金融小秘书 智能提醒
+                                </div>
+                                <div>
+                            <span>
+                                <i class="colorIcon color-shenghuojiaofei1"></i>
+                            缴费提醒
+                            </span>
+                                    <span>
+                                <i class="colorIcon color-huankuan1"></i>
+                            还款提醒
+                            </span>
+                                    <span>
+                                <i class="colorIcon color-naozhong1"></i>
+                            个人提醒
+                            </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
+</script>
+<!--没有写的页-->
+<script id="templates/pageNotWrite.html" type="text/ng-template">
+    <ion-view>
+        <ion-content>
+            <p style="text-align: center;line-height: 100vh;font-size: 40px">
+                {{ pageName }}页没写</p>
+        </ion-content>
+    </ion-view>
+</script>
+<!--我的页模板-->
+<script id="templates/myInfoTemplate.html" type="text/ng-template">
+    <ion-view>
+        <ion-content>
+            <div class="myInfo">
+                <div class="bar bar-header bar-light">
+                    <div class="tabs tabs-icon-top">
+                        <a class="tab-item myInfo_top_icon_left" href="#">
+                            <i class="iconfont icon-tuichu2 text_weight"></i>
+                            <span class="iconfont_text">退出</span>
+                        </a>
+                        <h1 class="title" style="line-height: 56px">我的</h1>
+                        <a class="tab-item myInfo_top_icon_right" href="#">
+                            <i class="iconfont icon-xiaoxi1 text_weight"></i>
+                            <span class="iconfont_text">消息</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content has-header ionic-pseudo">
+                    <div class="list">
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            我的账户
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            收支记录
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            我的网点
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            金融日历
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            安全中心与设置
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <div class="item item-divider myInfo_item-height">
+                        </div>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            在线客服
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            操作记录
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            我的奖品
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <div class="item item-divider myInfo_item-height">
+                        </div>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            关于我们
+                            <span class="item-note">
+                                当前版本 &nbsp;{{ appVersion }}
+                            </span>
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            隐私政策
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <div class="item item-divider myInfo_item-height">
+                        </div>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            在线开户
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                        <a class="item myInfo_item_height item-icon-left item-icon-right" href="#">
+                            <i class="icon ion-bag"></i>
+                            我的分享
+                            <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
+</script>
+</body>
+</html>

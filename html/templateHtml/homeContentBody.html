@@ -1,0 +1,147 @@
+<div class="row content_body_icon1">
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-xinyongqia content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">信用卡</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-cunkuan3 content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">存款</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-remenhuodong2 content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">热门活动</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-shenghuojiaofei content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">生活缴费</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-dkw_daikuan- content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">贷款</p>
+        </a>
+    </div>
+</div>
+<div class="row content_body_icon2">
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-licaidingdan content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">理财产品</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-zhinengjijin content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">基金</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-Positioning_icon content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">本地优惠</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-ETC content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">ETC办理</p>
+        </a>
+    </div>
+    <div class="col">
+        <a href="#">
+            <i class="colorIcon color-quanbu content_body_icon_size"></i>
+            <div style="height: 5px"></div>
+            <p class="content_body_icon_text">全部</p>
+        </a>
+    </div>
+</div>
+<div class="content_body_news">
+                            <span class="body_news_icon">
+                                <i class="colorIcon color-toutiao1" style="font-size: 50px;line-height: 50px"></i>
+                            </span>
+    <div class="body_news_dian"></div>
+    <span class="body_news_content">
+                                <span class="news_content_move" ng-style="news_content_move">
+                                    <a href="#" class="body_news_content_info"
+                                       ng-repeat="item in dataNews">
+                                        {{ item }}
+                                    </a>
+                                </span>
+                            </span>
+</div>
+<div class="content_body_USDAndAU">
+    <div class="body_USDAndAU_border">
+        <span>美元(USD)</span>
+        <span>{{ exchangeRateUSD }}</span>
+        <span>|</span>
+        <span>黄金(AU)</span>
+        <span>{{ exchangeRateAU }}</span>
+    </div>
+</div>
+<div class="content_body_moveImg">
+    <div class="body_moveImg_width">
+        <ion-slide-box
+                active-slide="myActiveSlide"
+                does-continue="true"
+                auto-play="true"
+                slide-interval="2500">
+            <ion-slide>
+                <div class="box img_one"><h1>BLUE</h1></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img_two"><h1>YELLOW</h1></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img_three"><h1>PINK</h1></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img_four"><h1>goldenrod</h1></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box img_five"><h1>green</h1></div>
+            </ion-slide>
+        </ion-slide-box>
+    </div>
+</div>
+<div class="content_body_footer">
+    <a href="#">
+        <div>
+            <span>金融小秘书</span>
+            <i class="icon ion-chevron-right"></i>
+        </div>
+        <div>
+            金融小秘书 智能提醒
+        </div>
+        <div>
+                            <span>
+                                <i class="colorIcon color-shenghuojiaofei1"></i>
+                            缴费提醒
+                            </span>
+            <span>
+                                <i class="colorIcon color-huankuan1"></i>
+                            还款提醒
+                            </span>
+            <span>
+                 <i class="colorIcon color-naozhong1"></i>
+                    个人提醒
+              </span>
+        </div>
+    </a>
+</div>

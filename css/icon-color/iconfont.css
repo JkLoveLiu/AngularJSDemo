@@ -2,9 +2,9 @@
   font-family: "colorIcon"; /* Project id 2610264 */
   /* Color fonts */
   src: 
-       url('iconfont.woff2?t=1623839543464') format('woff2'),
-       url('iconfont.woff?t=1623839543464') format('woff'),
-       url('iconfont.ttf?t=1623839543464') format('truetype');
+       url('iconfont.woff2?t=1623854364904') format('woff2'),
+       url('iconfont.woff?t=1623854364904') format('woff'),
+       url('iconfont.ttf?t=1623854364904') format('truetype');
 }
 
 .colorIcon {
@@ -15,56 +15,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.color-yinhangzhanghukaihushenqingliucheng:before {
-  content: "\e654";
+.color-card-a:before {
+  content: "\e61b";
 }
 
-.color-jianglidan:before {
-  content: "\e69d";
+.color-card-b:before {
+  content: "\e620";
+}
+
+.color-card-c:before {
+  content: "\e623";
+}
+
+.color-yinhangzhanghukaihushenqingliucheng:before {
+  content: "\e654";
 }
 
 .color-genjinjilu:before {
   content: "\e665";
 }
 
-.color-zaixiankaihu:before {
-  content: "\e6a2";
-}
-
 .color-yinsi:before {
   content: "\e662";
-}
-
-.color-zaixiankaihu1:before {
-  content: "\e6aa";
-}
-
-.color-wangdian4:before {
-  content: "\e612";
-}
-
-.color-zhanghuguanli:before {
-  content: "\e614";
-}
-
-.color-anquanyinsi:before {
-  content: "\e98b";
 }
 
 .color-rili:before {
   content: "\e616";
 }
 
-.color-jilu1:before {
-  content: "\e635";
-}
-
 .color-anquanzhongxin:before {
   content: "\e602";
-}
-
-.color-fenxiang:before {
-  content: "\e67f";
 }
 
 .color-wodezhanghu2:before {
@@ -77,10 +57,6 @@
 
 .color-fenxiang1:before {
   content: "\e658";
-}
-
-.color-anquanzhongxin1:before {
-  content: "\e61e";
 }
 
 .color-kefu1:before {
@@ -97,14 +73,6 @@
 
 .color-jiaoyijilu1:before {
   content: "\e60e";
-}
-
-.color-fuwutiaokuanjiyinsi2:before {
-  content: "\e60f";
-}
-
-.color-wangdian2:before {
-  content: "\e80b";
 }
 
 .color-naozhong1:before {

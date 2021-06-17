@@ -83,18 +83,46 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
-    $scope.footerHideFn = function (){
+
+    $scope.myInfoAccountClick = function () {
+        // 隐藏底部栏
         $scope.footerHide = {
             "display": "none"
         }
+        // 获取银行卡信息
+        $http({
+            method: 'GET',
+            url: '../data/data.json'
+        }).then(function successCallback(res) {
+            $scope.bankCardInfo = res.data.bankCard;
+        }, function errorCallback(response) {
+            console.log(response)
+        });
     }
+
     $scope.myInfoAccountBack = function () {
         $scope.footerHide = {
             "display": "block"
         }
     }
 
+    $scope.cardImg = function (num) {
+        switch (num) {
+            case 1:
+                return "colorIcon color-card-a";
+            case  2 :
+                return "colorIcon color-card-b";
+            case  3 :
+                return "colorIcon color-card-c";
+        }
+    }
 
+    $scope.bankCardIDHide = function (cardID) {
+        let showCardID = cardID.substr(0,4)
+        showCardID += " **** **** "
+        showCardID += cardID.substr(-4)
+        return showCardID;
+    }
 
 
 })

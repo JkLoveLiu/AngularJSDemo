@@ -107,7 +107,7 @@
                 <div class="content has-header ionic-pseudo">
                     <div class="list">
                         <a class="item myInfo_item_height item-icon-left item-icon-right"
-                           ui-sref="myInfo_account" ng-click="footerHideFn()">
+                           ui-sref="myInfo_account" ng-click="myInfoAccountClick()">
                             <i class="colorIcon color-wodezhanghu2"></i>
                             我的账户
                             <i class="icon ion-ios-arrow-right" style="font-size: 22px"></i>
@@ -197,7 +197,32 @@
                         <a class="tab-item myInfo_account_icon_right" href="#">
                             <i class="iconfont icon-kefu myInfo_text_weight"></i>
                         </a>
-
+                    </div>
+                </div>
+                <div class="myInfo_account_body">
+                    <div class="bankCard_div" ng-repeat="(key,item) in bankCardInfo">
+                        <div class="bankCard_div_top">
+                            <span>
+                                <i class="{{cardImg(item.cardImg)}}"></i>
+                            </span>
+                            <div>
+                                <p>{{ bankCardIDHide(key) }}</p>
+                                <p>长城电子借记卡 （{{ item.type }}类账户）</p>
+                            </div>
+                        </div>
+                        <div class="bankCard_div_center">
+                            <span>账面余额</span>
+                            <span>
+                                人民币元 <span>{{ item.overage }}</span>
+                            </span>
+                        </div>
+                        <div class="bankCard_div_bottom">
+                            <span>交易明细</span>
+                            <span>|</span>
+                            <span>转账</span>
+                            <span>|</span>
+                            <span>买理财</span>
+                        </div>
                     </div>
                 </div>
             </div>

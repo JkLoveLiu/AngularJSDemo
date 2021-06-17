@@ -16,4 +16,8 @@ homeApp.config(function ($stateProvider) {
             url: '/myInfo_account',
             templateUrl: 'templates/myInfoAccountTemplate.html'
         })
+        .state('IONotes', {
+            url: '/IONotes',
+            templateUrl: 'templates/IONotesTemplate.html'
+        })
 })

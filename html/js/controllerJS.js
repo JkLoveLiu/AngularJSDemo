@@ -68,7 +68,7 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             }
         }, 1500)
     }, 3000)
-
+    // 没有写的页的名字
     $scope.notPage = function (name) {
         $scope.pageName = name;
     }
@@ -83,12 +83,15 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
-
-    $scope.myInfoAccountClick = function () {
+    $scope.hideFooter = function () {
         // 隐藏底部栏
         $scope.footerHide = {
             "display": "none"
         }
+    }
+    // 点击我的账户
+    $scope.myInfoAccountClick = function () {
+        $scope.hideFooter()
         // 获取银行卡信息
         $http({
             method: 'GET',
@@ -99,13 +102,27 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
+    //点击收支记录
+    $scope.IONotesClick = function () {
+        $scope.hideFooter()
+        // 获取银行卡信息
+        $http({
+            method: 'GET',
+            url: '../data/TransactionData.json'
+        }).then(function successCallback(res) {
+            $scope.tradingInfo = res.data
+        }, function errorCallback(response) {
+            console.log(response)
+        });
+    }
 
+    // 返回我的页
     $scope.myInfoAccountBack = function () {
         $scope.footerHide = {
             "display": "block"
         }
     }
-
+    // 判断银行卡的类型
     $scope.cardImg = function (num) {
         switch (num) {
             case 1:
@@ -116,13 +133,39 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
                 return "colorIcon color-card-c";
         }
     }
-
+    // 隐藏部分银行卡号
     $scope.bankCardIDHide = function (cardID) {
         let showCardID = cardID.substr(0,4)
         showCardID += " **** **** "
         showCardID += cardID.substr(-4)
         return showCardID;
     }
-
+    // 判断是信用卡还是借记卡
+    $scope.decideCardType = function (cardType) {
+        switch (cardType) {
+            case 1:
+                return "信用卡";
+            case 2:
+                return "借记卡"
+        }
+    }
+    // 是否显示汉字人民币
+    $scope.showTextRmb = function (cardType) {
+        switch (cardType) {
+            case 1:
+                return;
+            case 2:
+                return "  (人民币)"
+        }
+    }
+    // 是否显示英文RMB
+    $scope.showRMB = function (cardType) {
+        switch (cardType) {
+            case 1:
+                return "RMB";
+            case 2:
+                return;
+        }
+    }
 
 })

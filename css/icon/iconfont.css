@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2609418 */
-  src: url('iconfont.woff2?t=1623766763444') format('woff2'),
-       url('iconfont.woff?t=1623766763444') format('woff'),
-       url('iconfont.ttf?t=1623766763444') format('truetype');
+  src: url('iconfont.woff2?t=1623940359222') format('woff2'),
+       url('iconfont.woff?t=1623940359222') format('woff'),
+       url('iconfont.ttf?t=1623940359222') format('truetype');
 }
 
 .iconfont {
@@ -13,20 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tuichu:before {
-  content: "\e704";
+.icon-shanchu1:before {
+  content: "\e605";
 }
 
-.icon-tuichu1:before {
-  content: "\e700";
+.icon-shanchu:before {
+  content: "\e696";
 }
 
 .icon-tuichu2:before {
   content: "\e6d8";
-}
-
-.icon-tuichu3:before {
-  content: "\e692";
 }
 
 .icon-licai:before {

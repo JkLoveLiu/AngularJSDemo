@@ -2,9 +2,9 @@
   font-family: "colorIcon"; /* Project id 2610264 */
   /* Color fonts */
   src: 
-       url('iconfont.woff2?t=1623854364904') format('woff2'),
-       url('iconfont.woff?t=1623854364904') format('woff'),
-       url('iconfont.ttf?t=1623854364904') format('truetype');
+       url('iconfont.woff2?t=1623939012505') format('woff2'),
+       url('iconfont.woff?t=1623939012505') format('woff'),
+       url('iconfont.ttf?t=1623939012505') format('truetype');
 }
 
 .colorIcon {
@@ -13,6 +13,42 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.color-unie64d-copy:before {
+  content: "\e601";
+}
+
+.color-gouwuche:before {
+  content: "\e614";
+}
+
+.color-gouwuche1:before {
+  content: "\e63b";
+}
+
+.color-youhuiquan:before {
+  content: "\e608";
+}
+
+.color-youhuiquan1:before {
+  content: "\e670";
+}
+
+.color-youhuiquanx:before {
+  content: "\e659";
+}
+
+.color-youhuiquan-copy:before {
+  content: "\e603";
+}
+
+.color-jifenshangcheng:before {
+  content: "\e645";
+}
+
+.color-1_jifenduihuan-22:before {
+  content: "\f554";
 }
 
 .color-card-a:before {

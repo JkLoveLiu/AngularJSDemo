@@ -1,0 +1,99 @@
+.myInfo_IONotes_div {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.myInfo_IONotes_div .myInfo_IONotes_icon_left {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    line-height: 56px;
+    opacity: 1;
+}
+
+.myInfo_IONotes_div .myInfo_text_weight {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.myInfo_IONotes_div .myInfo_IONotes_body {
+    height: auto;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    background-color: rgb(241, 239, 245);
+}
+
+.myInfo_IONotes_div .myInfo_IONotes_body_div {
+
+}
+
+.myInfo_IONotes_body_div > p {
+    text-align: center;
+    font-size: 16px;
+    color: #cccccc;
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+.myInfo_IONotes_div .IONotes_body_div {
+    height: 400px;
+    width: 90%;
+    border-radius: 15px;
+    margin: 15px auto 0;
+    /*background-color: white;*/
+    position: relative;
+    /*background-color: #0a9dc7;*/
+    background-color: white;
+}
+
+.myInfo_IONotes_div .IONotes_body_div>p:nth-child(1) {
+    padding-top: 25px;
+    font-size: 22px;
+    font-family: "Microsoft YaHei UI", serif;
+}
+
+.myInfo_IONotes_div .IONotes_body_div .IONotes_body_div_del {
+    position: absolute;
+    right: 20px;
+    color: #cccccc;
+}
+
+.myInfo_IONotes_div .IONotes_body_div>p:nth-child(2) {
+    text-align: center;
+    font-size: 18px;
+    color: #cccccc;
+    padding: 10px 0;
+}
+
+.myInfo_IONotes_div .IONotes_body_div>p:nth-child(3) {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.IONotes_body_div .IONotes_body_div_info{
+    position: absolute;
+    left: 20px;
+    width: 85%;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.IONotes_body_div .IONotes_body_div_info>p{
+    margin: 0 auto;
+}
+.IONotes_body_div .IONotes_body_footer_icon{
+    position: absolute;
+    left: 0;
+    top: 300px;
+    width: 100%;
+    text-align: center;
+}
+.IONotes_body_footer_icon_size{
+    font-size: 45px;
+}

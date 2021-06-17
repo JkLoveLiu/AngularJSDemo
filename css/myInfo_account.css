@@ -35,7 +35,7 @@
     position: absolute;
     left: 0;
     top: 44px;
-    background-color: #faf4ef;
+    background-color: rgb(245,245,245);
 }
 
 .myInfo_account_body .bankCard_div {
@@ -88,7 +88,7 @@
 
 .bankCard_div .bankCard_div_center {
     height: 60px;
-    background-color: #fceed5;
+    background-color: rgb(251,247,242);
 }
 
 .bankCard_div .bankCard_div_center span:nth-child(1) {

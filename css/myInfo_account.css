@@ -13,7 +13,10 @@
     line-height: 56px;
     opacity: 1;
 }
-
+.myInfo_account_div .myInfo_account_header_fixed{
+    position: fixed!important;
+    top: 0!important;
+}
 .myInfo_account_div .myInfo_account_icon_right {
     display: inline-block;
     position: absolute;

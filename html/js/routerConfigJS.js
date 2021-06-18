@@ -20,4 +20,8 @@ homeApp.config(function ($stateProvider) {
             url: '/IONotes',
             templateUrl: 'templates/IONotesTemplate.html'
         })
+        .state('aboutMy', {
+            url: '/aboutMy',
+            templateUrl: 'templates/aboutMyTemplate.html'
+        })
 })

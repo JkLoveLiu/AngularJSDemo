@@ -1,0 +1,35 @@
+.myInfo_aboutMy {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.myInfo_aboutMy .myInfo_aboutMy_icon_left {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    line-height: 56px;
+    opacity: 1;
+}
+.myInfo_aboutMy .myInfo_aboutMy_text_weight {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+}
+.myInfo_aboutMy .myInfo_aboutMy_body {
+    height: auto;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 44px;
+}
+.myInfo_aboutMy  .myInfo_aboutMy_body_div{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.myInfo_aboutMy  .myInfo_aboutMy_body_div p{
+    margin: 0 auto;
+    line-height: 30px;
+}

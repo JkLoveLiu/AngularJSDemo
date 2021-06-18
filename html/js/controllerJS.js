@@ -162,10 +162,23 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
     $scope.showRMB = function (cardType) {
         switch (cardType) {
             case 1:
-                return "RMB";
+                return "RMB ";
             case 2:
                 return;
         }
+    }
+    // 点击关于我的
+    $scope.aboutMyClick = function () {
+        $scope.hideFooter()
+        // 版本信息获取appVersion
+        $http({
+            method: 'GET',
+            url: '../data/data.json'
+        }).then(function successCallback(res) {
+            $scope.myAppVersion = res.data.appVersion;
+        }, function errorCallback(response) {
+            console.log(response)
+        });
     }
 
 })

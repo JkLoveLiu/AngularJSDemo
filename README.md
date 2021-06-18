@@ -6,7 +6,7 @@ AngularJS的小项目
 
 一个期末作业，非常粗糙（上交以后应该不会继续完善了）
 
-
+```
 目录说明
 |-- AngularJSDemo
 		|-- index.html					// 入口文件
@@ -39,3 +39,4 @@ AngularJS的小项目
 		|-- unpackage					// 5+app不会打包的文件夹
 		|-- manifest.json				// 5+app打包需要的json文件
 		|-- README.md					// 介绍文件
+```

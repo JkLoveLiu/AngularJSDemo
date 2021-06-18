@@ -167,6 +167,9 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
                 return;
         }
     }
+    $scope.lastCardID = function (cardId) {
+        return cardId.substr(-4);
+    }
     // 点击关于我的
     $scope.aboutMyClick = function () {
         $scope.hideFooter()

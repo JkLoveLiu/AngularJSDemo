@@ -63,18 +63,22 @@
         <ion-content>
             <div class="home_div">
                 <!--   头部     -->
-                <header-div></header-div>
+                <ion-header-bar align-title="left" class="bar-light bg_none">
+                    <header-div></header-div>
+                </ion-header-bar>
+                <ion-content>
+                    <div class="home_content">
+                        <!--   内容上部     -->
+                        <div class="home_content_head">
+                            <home-content-head></home-content-head>
+                        </div>
+                        <!--   内容中部     -->
+                        <div class="home_content_body">
+                            <home-content-body></home-content-body>
+                        </div>
+                    </div>
+                </ion-content>
                 <!--   内容     -->
-                <div class="home_content">
-                    <!--   内容上部     -->
-                    <div class="home_content_head">
-                        <home-content-head></home-content-head>
-                    </div>
-                    <!--   内容中部     -->
-                    <div class="home_content_body">
-                        <home-content-body></home-content-body>
-                    </div>
-                </div>
             </div>
         </ion-content>
     </ion-view>
@@ -191,46 +195,50 @@
     <ion-view>
         <ion-content>
             <div class="myInfo_account_div">
-                <div class="bar bar-header bar-light myInfo_account_header_fixed">
-                    <div class="tabs tabs-icon-top">
-                        <a class="tab-item myInfo_account_icon_left"
-                           ng-click="myInfoAccountBack()" ui-sref="myInfo"
-                           style="height: 100%;width: 44px;left: 0;z-index: 2">
-                            <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
-                        </a>
-                        <h1 class="title" style="line-height: 54px">我的</h1>
-                        <a class="tab-item myInfo_account_icon_right" href="#">
-                            <i class="iconfont icon-kefu myInfo_text_weight"></i>
-                        </a>
+                <ion-header-bar align-title="left" class="bar-positive">
+                    <div class="bar bar-header bar-light myInfo_account_header_fixed">
+                        <div class="tabs tabs-icon-top">
+                            <a class="tab-item myInfo_account_icon_left"
+                               ng-click="myInfoAccountBack()" ui-sref="myInfo"
+                               style="height: 100%;width: 44px;left: 0;z-index: 2">
+                                <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
+                            </a>
+                            <h1 class="title" style="line-height: 54px">我的</h1>
+                            <a class="tab-item myInfo_account_icon_right" href="#">
+                                <i class="iconfont icon-kefu myInfo_text_weight"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="myInfo_account_body">
-                    <!--         生成银行卡信息           -->
-                    <div class="bankCard_div" ng-repeat="(key,item) in bankCardInfo">
-                        <div class="bankCard_div_top">
+                </ion-header-bar>
+                <ion-content>
+                    <div class="myInfo_account_body">
+                        <!--         生成银行卡信息           -->
+                        <div class="bankCard_div" ng-repeat="(key,item) in bankCardInfo">
+                            <div class="bankCard_div_top">
                             <span>
                                 <i class="{{cardImg(item.cardImg)}}"></i>
                             </span>
-                            <div>
-                                <p>{{ bankCardIDHide(key) }}</p>
-                                <p>长城电子借记卡 （{{ item.type }}类账户）</p>
+                                <div>
+                                    <p>{{ bankCardIDHide(key) }}</p>
+                                    <p>长城电子借记卡 （{{ item.type }}类账户）</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bankCard_div_center">
-                            <span>账面余额</span>
-                            <span>
+                            <div class="bankCard_div_center">
+                                <span>账面余额</span>
+                                <span>
                                 人民币元 <span>{{ item.overage }}</span>
                             </span>
-                        </div>
-                        <div class="bankCard_div_bottom">
-                            <span>交易明细</span>
-                            <span>|</span>
-                            <span>转账</span>
-                            <span>|</span>
-                            <span>买理财</span>
+                            </div>
+                            <div class="bankCard_div_bottom">
+                                <span>交易明细</span>
+                                <span>|</span>
+                                <span>转账</span>
+                                <span>|</span>
+                                <span>买理财</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ion-content>
             </div>
         </ion-content>
     </ion-view>
@@ -240,62 +248,66 @@
     <ion-view>
         <ion-content>
             <div class="myInfo_IONotes_div">
-                <div class="bar bar-header bar-light">
-                    <div class="tabs tabs-icon-top">
-                        <a class="tab-item myInfo_IONotes_icon_left"
-                           ng-click="myInfoAccountBack()" ui-sref="myInfo"
-                           style="height: 100%;width: 44px;left: 0;z-index: 2">
-                            <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
-                        </a>
-                        <h1 class="title" style="line-height: 54px">动帐通知</h1>
+                <ion-header-bar align-title="left" class="bar-positive">
+                    <div class="bar bar-header bar-light">
+                        <div class="tabs tabs-icon-top">
+                            <a class="tab-item myInfo_IONotes_icon_left"
+                               ng-click="myInfoAccountBack()" ui-sref="myInfo"
+                               style="height: 100%;width: 44px;left: 0;z-index: 2">
+                                <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
+                            </a>
+                            <h1 class="title" style="line-height: 54px">动帐通知</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="myInfo_IONotes_body">
-                    <div class="myInfo_IONotes_body_div" ng-repeat="(key,item) in tradingInfo">
-                        <p>{{ item.date }}</p>
-                        <div class="IONotes_body_div">
-                            <p>
-                                &nbsp;&nbsp;&nbsp;{{ decideCardType(item.cardType) }}动账提醒
-                                <i class="iconfont icon-shanchu1 IONotes_body_div_del"></i>
-                            </p>
-                            <p>交易金额{{ showTextRmb(item.cardType) }}</p>
-                            <p>{{ showRMB(item.cardType) }}{{ item.amount }}</p>
-                            <div class="IONotes_body_div_info">
+                </ion-header-bar>
+                <ion-content>
+                    <div class="myInfo_IONotes_body">
+                        <div class="myInfo_IONotes_body_div" ng-repeat="(key,item) in tradingInfo">
+                            <p>{{ item.date }}</p>
+                            <div class="IONotes_body_div">
                                 <p>
-                                    尊敬的用户：
+                                    &nbsp;&nbsp;&nbsp;{{ decideCardType(item.cardType) }}动账提醒
+                                    <i class="iconfont icon-shanchu1 IONotes_body_div_del"></i>
                                 </p>
-                                <p>
-                                    您尾号为 {{ lastCardID(item.cardID) }} 的农业银行{{decideCardType(item.cardType)}}发生了一笔动账交易
-                                </p>
-                                <p>
-                                    交易时间：{{key}}
-                                </p>
-                                <p>
-                                    交易金额：{{ showRMB(item.cardType) }}{{ item.amount }}
-                                </p>
-                            </div>
-                            <div class="IONotes_body_footer_icon">
-                                <div class="row">
-                                    <div class="col">
-                                        <i class="colorIcon color-unie64d-copy IONotes_body_footer_icon_size"></i>
-                                        <div style="height: 5px"></div>
-                                        <span>优惠券</span>
-                                    </div>
-                                    <div class="col">
-                                        <i class="colorIcon color-jifenshangcheng IONotes_body_footer_icon_size"></i>
-                                        <div style="height: 5px"></div>
-                                        <span>积分换购</span>
-                                    </div>
-                                    <div class="col">
-                                        <i class="colorIcon color-gouwuche IONotes_body_footer_icon_size"></i>
-                                        <div style="height: 5px"></div>
-                                        <span>聪明购商城</span>
+                                <p>交易金额{{ showTextRmb(item.cardType) }}</p>
+                                <p>{{ showRMB(item.cardType) }}{{ item.amount }}</p>
+                                <div class="IONotes_body_div_info">
+                                    <p>
+                                        尊敬的用户：
+                                    </p>
+                                    <p>
+                                        您尾号为 {{ lastCardID(item.cardID) }} 的农业银行{{decideCardType(item.cardType)}}发生了一笔动账交易
+                                    </p>
+                                    <p>
+                                        交易时间：{{key}}
+                                    </p>
+                                    <p>
+                                        交易金额：{{ showRMB(item.cardType) }}{{ item.amount }}
+                                    </p>
+                                </div>
+                                <div class="IONotes_body_footer_icon">
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="colorIcon color-unie64d-copy IONotes_body_footer_icon_size"></i>
+                                            <div style="height: 5px"></div>
+                                            <span>优惠券</span>
+                                        </div>
+                                        <div class="col">
+                                            <i class="colorIcon color-jifenshangcheng IONotes_body_footer_icon_size"></i>
+                                            <div style="height: 5px"></div>
+                                            <span>积分换购</span>
+                                        </div>
+                                        <div class="col">
+                                            <i class="colorIcon color-gouwuche IONotes_body_footer_icon_size"></i>
+                                            <div style="height: 5px"></div>
+                                            <span>聪明购商城</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </ion-content>
             </div>
         </ion-content>
     </ion-view>
@@ -319,10 +331,12 @@
                     <div class="myInfo_aboutMy_body_div">
                         <p>当前版本：{{ myAppVersion }}</p>
                         <p>作者：软件1901柳君康</p>
-                        <p>采用ionic和ionic路由制作，使用HBuilder X的 5+ app 项目制作并打包成为Android的安装包（只是利用了5+app的打包，并未调用安卓API），项目里95%的icon图标均来源于阿里的图标库</p>
+                        <p>采用ionic和ionic路由制作，使用HBuilder X的 5+ app
+                            项目制作并打包成为Android的安装包（只是利用了5+app的打包，并未调用安卓API），项目里95%的icon图标均来源于阿里的图标库</p>
                         <div>
                             <img src="../img/filelist.png" alt="" width="100%">
                         </div>
+                        <p>项目已上传github</p>
                     </div>
                 </div>
             </div>

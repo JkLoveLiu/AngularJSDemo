@@ -1,0 +1,67 @@
+<!--收支记录页模板-->
+<ion-view>
+    <ion-content>
+        <div class="myInfo_IONotes_div">
+            <ion-header-bar align-title="left" class="bar-positive">
+                <div class="bar bar-header bar-light">
+                    <div class="tabs tabs-icon-top">
+                        <a class="tab-item myInfo_IONotes_icon_left"
+                           ng-click="myInfoAccountBack()" ui-sref="myInfo"
+                           style="height: 100%;width: 44px;left: 0;z-index: 2">
+                            <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
+                        </a>
+                        <h1 class="title" style="line-height: 54px">动帐通知</h1>
+                    </div>
+                </div>
+            </ion-header-bar>
+            <ion-content>
+                <div class="myInfo_IONotes_body">
+                    <div class="myInfo_IONotes_body_div" ng-repeat="(key,item) in tradingInfo">
+                        <p>{{ item.date }}</p>
+                        <div class="IONotes_body_div">
+                            <p>
+                                &nbsp;&nbsp;&nbsp;{{ decideCardType(item.cardType) }}动账提醒
+                                <i class="iconfont icon-shanchu1 IONotes_body_div_del"></i>
+                            </p>
+                            <p>交易金额{{ showTextRmb(item.cardType) }}</p>
+                            <p>{{ showRMB(item.cardType) }}{{ item.amount }}</p>
+                            <div class="IONotes_body_div_info">
+                                <p>
+                                    尊敬的用户：
+                                </p>
+                                <p>
+                                    您尾号为 {{ lastCardID(item.cardID) }} 的农业银行{{decideCardType(item.cardType)}}发生了一笔动账交易
+                                </p>
+                                <p>
+                                    交易时间：{{key}}
+                                </p>
+                                <p>
+                                    交易金额：{{ showRMB(item.cardType) }}{{ item.amount }}
+                                </p>
+                            </div>
+                            <div class="IONotes_body_footer_icon">
+                                <div class="row">
+                                    <div class="col">
+                                        <i class="colorIcon color-unie64d-copy IONotes_body_footer_icon_size"></i>
+                                        <div style="height: 5px"></div>
+                                        <span>优惠券</span>
+                                    </div>
+                                    <div class="col">
+                                        <i class="colorIcon color-jifenshangcheng IONotes_body_footer_icon_size"></i>
+                                        <div style="height: 5px"></div>
+                                        <span>积分换购</span>
+                                    </div>
+                                    <div class="col">
+                                        <i class="colorIcon color-gouwuche IONotes_body_footer_icon_size"></i>
+                                        <div style="height: 5px"></div>
+                                        <span>聪明购商城</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-content>
+        </div>
+    </ion-content>
+</ion-view>

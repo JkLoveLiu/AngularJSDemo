@@ -1,0 +1,38 @@
+.myInfo {
+    height: calc(100vh - 44px);
+    width: 100%;
+    position: absolute;
+}
+
+.myInfo_top_icon_left {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+}
+
+.myInfo_top_icon_right {
+    display: inline-block;
+    position: absolute;
+    right: 22px;
+}
+
+.myInfo_item-height {
+    padding: 6px;
+    height: 5px !important;
+    min-height: 5px !important;
+}
+
+.myInfo_item_height {
+    padding: 15px 54px;
+}
+
+
+.list .colorIcon {
+    position: absolute;
+    top: 0;
+    left: 11px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 32px;
+}

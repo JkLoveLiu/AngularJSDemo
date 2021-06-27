@@ -115,7 +115,6 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
-
     // 返回我的页
     $scope.myInfoAccountBack = function () {
         $scope.footerHide = {
@@ -183,5 +182,50 @@ homeApp.controller('homeCtrl', function ($scope, $http, $interval, $timeout) {
             console.log(response)
         });
     }
-
+    // 首页的下拉刷新
+    $scope.doRefreshHome = function () {
+        $http({
+            method: 'GET',
+            url: '../data/data.json'
+        }).then(function successCallback(newRes) {
+            $scope.dataNews = newRes.data.news;
+            $scope.exchangeRateUSD = newRes.data.exchangeRate.USD;
+            $scope.exchangeRateAU = newRes.data.exchangeRate.AU;
+        }).finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        })
+    }
+    // 我的页下拉刷新
+    $scope.doRefreshMyInfo = function () {
+        $http({
+            method: 'GET',
+            url: '../data/data.json'
+        }).then(function successCallback(newRes) {
+            $scope.appVersion = newRes.data.appVersion;
+        }).finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        })
+    }
+    // 收支记录页的下拉刷新
+    $scope.doRefreshIoNotes = function () {
+        $http({
+            method: 'GET',
+            url: '../data/TransactionData.json'
+        }).then(function successCallback(newTradingInfo) {
+            $scope.tradingInfo = newTradingInfo.data
+        }).finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        })
+    }
+    // 我的账户页的下拉刷新
+    $scope.doRefreshMyAccount = function () {
+        $http({
+            method: 'GET',
+            url: '../data/data.json'
+        }).then(function successCallback(newBankCardInfo) {
+            $scope.bankCardInfo = newBankCardInfo.data.bankCard;
+        }).finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        })
+    }
 })

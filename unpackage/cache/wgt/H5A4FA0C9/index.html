@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>手机银行</title>
+    <link href="lib/ionic/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/ionic/js/ionic.bundle.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <script>
+        angular.module('ionicApp', ['ionic'])
+            .controller('SlideController', function ($scope) {
+                $scope.num = 0;
+                $scope.index_next_button = function () {
+                    window.location.href = 'html/home.html#/home'
+                }
+                $scope.index_btn = false;
+                $scope.slideInterval = '2000';
+                $scope.myActiveSlide = 0;
+                $scope.thisChanged = function (index) {
+                    $scope.index_btn = index === 2;
+                }
+            })
+    </script>
+</head>
+
+<body ng-app="ionicApp" animation="slide-left-right-ios7">
+<div ng-controller="SlideController">
+    <div class="index_img">
+        <div id="index_next_btn" ng-hide="index_btn" ng-click="index_next_button()">跳过</div>
+        <ion-slide-box on-slide-changed="thisChanged($index)"
+                       slide-interval="slideInterval"
+                       active-slide="myActiveSlide">
+            <ion-slide>
+                <div class="box index_img_one"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box index_img_two"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box index_img_three"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <button class="button button-positive index_btn_nextPage"
+                ng-click="index_next_button()"
+                ng-hide="!index_btn">&nbsp;&nbsp;开启手机银行&nbsp;&nbsp;
+        </button>
+    </div>
+</div>
+</body>
+</html>

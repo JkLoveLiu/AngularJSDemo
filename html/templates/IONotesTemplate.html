@@ -1,20 +1,21 @@
 <!--收支记录页模板-->
 <ion-view>
-    <ion-content>
-        <div class="myInfo_IONotes_div">
-            <ion-header-bar align-title="left" class="bar-positive">
-                <div class="bar bar-header bar-light">
-                    <div class="tabs tabs-icon-top">
-                        <a class="tab-item myInfo_IONotes_icon_left"
-                           ng-click="myInfoAccountBack()" ui-sref="myInfo"
-                           style="height: 100%;width: 44px;left: 0;z-index: 2">
-                            <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
-                        </a>
-                        <h1 class="title" style="line-height: 54px">动帐通知</h1>
-                    </div>
+    <div class="myInfo_IONotes_div">
+        <ion-header-bar align-title="left" class="bar-positive">
+            <div class="bar bar-header bar-light">
+                <div class="tabs tabs-icon-top">
+                    <a class="tab-item myInfo_IONotes_icon_left"
+                       ng-click="myInfoAccountBack()" ui-sref="myInfo"
+                       style="height: 100%;width: 44px;left: 0;z-index: 2">
+                        <i class="icon ion-ios-arrow-back myInfo_text_weight"></i>
+                    </a>
+                    <h1 class="title" style="line-height: 54px">动帐通知</h1>
                 </div>
-            </ion-header-bar>
+            </div>
+        </ion-header-bar>
+        <ion-pane>
             <ion-content>
+                <ion-refresher pulling-text="下拉刷新" on-refresh="doRefreshIoNotes()"></ion-refresher>
                 <div class="myInfo_IONotes_body">
                     <div class="myInfo_IONotes_body_div" ng-repeat="(key,item) in tradingInfo">
                         <p>{{ item.date }}</p>
@@ -62,6 +63,6 @@
                     </div>
                 </div>
             </ion-content>
-        </div>
-    </ion-content>
+        </ion-pane>
+    </div>
 </ion-view>

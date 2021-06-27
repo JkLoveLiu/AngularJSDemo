@@ -1,23 +1,24 @@
 <!--我的页模板-->
 <ion-view>
-    <ion-content>
-        <div class="myInfo">
-            <ion-header-bar align-title="left" class="bar-positive">
-                <div class="bar bar-header bar-light">
-                    <div class="tabs tabs-icon-top">
-                        <a class="tab-item myInfo_top_icon_left" href="#">
-                            <i class="iconfont icon-tuichu2 text_weight"></i>
-                            <span class="iconfont_text">退出</span>
-                        </a>
-                        <h1 class="title" style="line-height: 56px">我的</h1>
-                        <a class="tab-item myInfo_top_icon_right" href="#">
-                            <i class="iconfont icon-xiaoxi1 text_weight"></i>
-                            <span class="iconfont_text">消息</span>
-                        </a>
-                    </div>
+    <div class="myInfo">
+        <ion-header-bar align-title="left" class="bar-positive">
+            <div class="bar bar-header bar-light">
+                <div class="tabs tabs-icon-top">
+                    <a class="tab-item myInfo_top_icon_left" href="#">
+                        <i class="iconfont icon-tuichu2 text_weight"></i>
+                        <span class="iconfont_text">退出</span>
+                    </a>
+                    <h1 class="title" style="line-height: 56px">我的</h1>
+                    <a class="tab-item myInfo_top_icon_right" href="#">
+                        <i class="iconfont icon-xiaoxi1 text_weight"></i>
+                        <span class="iconfont_text">消息</span>
+                    </a>
                 </div>
-            </ion-header-bar>
+            </div>
+        </ion-header-bar>
+        <ion-pane>
             <ion-content>
+                <ion-refresher pulling-text="下拉刷新" on-refresh="doRefreshMyInfo()"></ion-refresher>
                 <div class="list">
                     <a class="item myInfo_item_height item-icon-left item-icon-right"
                        ui-sref="myInfo_account" ng-click="myInfoAccountClick()">
@@ -93,6 +94,6 @@
                     </a>
                 </div>
             </ion-content>
-        </div>
-    </ion-content>
+        </ion-pane>
+    </div>
 </ion-view>

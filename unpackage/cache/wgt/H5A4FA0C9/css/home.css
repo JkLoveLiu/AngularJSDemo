@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.aIsSelect{
+    color: red;
+}
+
+.home_div {
+    height: calc(100vh - 44px);
+    width: 100vw;
+    position: relative;
+}
+
+/* 透明背景 */
+.bg_none {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* 字体加粗 */
+.text_weight {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* 去除边框 */
+.bar-header, .bar-footer {
+    background-image: none !important;
+    border-width: 0 !important;
+    border-bottom: none transparent !important;
+}
+
+.home_content {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tabs-icon-top > .tabs .tab-item,
+.tabs-icon-top.tabs .tab-item {
+    font-size: 10px;
+    line-height: 40px;
+}
+
+.iconfont_text {
+    display: block;
+    margin-top: -25px;
+}
+
+.header_so {
+    line-height: 44px;
+    border: solid 1px #cecece;
+    width: 200px;
+    height: 34px;
+    margin-top: 8px;
+    border-radius: 100px;
+}
+
+.header_input {
+    height: 32px !important;
+    width: 135px;
+}
+
+/*内容区*/
+.home_content_head {
+    height: 140px;
+    width: 100%;
+    background-color: #37bd92;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+}
+
+
+.content_head_icon {
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    text-align: center;
+}
+
+.content_head_icon .content_head_icon_size {
+    font-size: 37px;
+}
+
+.content_head_icon .content_head_icon_text {
+    font-size: 14px;
+}
+
+.home_content_body {
+    width: 100vw;
+    height: calc(100vh - 210px);
+    background-color: white;
+    margin-top: -25px;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+.home_content_body .content_body_icon1 {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    height: 50px;
+}
+
+.home_content_body .content_body_icon2 {
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    height: 50px;
+}
+
+.home_content_body .content_body_icon_size {
+    font-size: 25px;
+}
+
+.content_body_news {
+    position: absolute;
+    top: 165px;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.home_content_body .content_body_icon_text {
+    font-size: 12px;
+}
+
+.content_body_news .body_news_icon {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.content_body_news .body_news_dian {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    left: 75px;
+}
+
+.content_body_news .body_news_content {
+    display: inline-block;
+    font-family: "Microsoft YaHei UI", serif;
+    height: 100%;
+    width: 255px;
+    line-height: 47px;
+    position: absolute;
+    top: 0;
+    left: 89px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.body_news_content .news_content_move {
+    display: block;
+}
+
+.body_news_content .body_news_content_info {
+    display: block;
+    height: 46px;
+}
+
+.content_body_USDAndAU {
+    position: absolute;
+    top: 215px;
+    height: 50px;
+    width: 100%;
+}
+
+.content_body_USDAndAU .body_USDAndAU_border {
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 0 #cccccc;
+    font-size: 16px;
+}
+
+.content_body_USDAndAU .body_USDAndAU_border span {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+.content_body_USDAndAU .body_USDAndAU_border span:nth-child(1),
+.content_body_USDAndAU .body_USDAndAU_border span:nth-child(4) {
+    color: rgb(160, 124, 80);
+}
+
+.content_body_USDAndAU .body_USDAndAU_border span:nth-child(3) {
+    color: #dcdcdc;
+}
+
+.content_body_moveImg {
+    position: absolute;
+    top: 285px;
+    height: 135px;
+    width: 100%;
+}
+
+.content_body_moveImg .body_moveImg_width {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.content_body_moveImg .slider {
+    height: 100%;
+}
+
+.content_body_moveImg .slider-slide {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.content_body_moveImg .img_one {
+    background-color: blue;
+}
+
+.content_body_moveImg .img_two {
+    background-color: yellow;
+}
+
+.content_body_moveImg .img_three {
+    background-color: pink;
+}
+
+.content_body_moveImg .img_four {
+    background-color: goldenrod;
+}
+
+.content_body_moveImg .img_five {
+    background-color: green;
+}
+
+.content_body_moveImg .box {
+    height: 100%;
+}
+
+.content_body_moveImg .slider-pager {
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+    width: 100%;
+    height: 15px;
+    text-align: center;
+}
+
+.content_body_moveImg .slider-pager .slider-pager-page {
+    width: 20px;
+}
+
+.content_body_moveImg .box h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content_body_footer {
+    position: absolute;
+    top: 437px;
+    width: 100%;
+    height: 95px;
+    border: none;
+}
+
+.content_body_footer div:nth-child(1) {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.content_body_footer div:nth-child(1) span:nth-child(1) {
+    display: inline-block;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content_body_footer div:nth-child(1) i:nth-child(2) {
+    position: absolute;
+    right: 3%;
+    line-height: 35px;
+    font-size: 18px;
+}
+
+.content_body_footer div:nth-child(2) {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content_body_footer div:nth-child(3) {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    position: absolute;
+    top: 67px;
+    left: 0;
+    right: 0;
+}
+
+.content_body_footer div:nth-child(3) span {
+    margin: 0 5px;
+}
+
+
+.footer_font_weight {
+    font-size: 25px;
+}
+
